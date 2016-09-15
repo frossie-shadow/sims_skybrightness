@@ -29,7 +29,7 @@ def allSkyDB(dateID, sqlQ=None, dtypes=None, dbAddress=None, filt='R'):
     data = cursor.fetchall()
     data = np.asarray(data, dtype=dtypes)
 
-    q2 = 'select mjd from dates where ID = %i'%dateID
+    q2 = 'select mjd from dates where ID = %i' % dateID
     cursor.execute(q2)
 
     mjd = cursor.fetchall()
